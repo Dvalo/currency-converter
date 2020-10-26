@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Currency Converter</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/izimodal/1.5.1/css/iziModal.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="currWrapper firstCurrency">
+       <div class="text_wrapper">
+          <div class="flag"><img src="https://www.countryflags.io/us/flat/64.png"></div>
+          <div class="nameAbbr_wrapper">
+             <div class="abbr">USD</div>
+             <div class="currName">United States Dollars</div>
+          </div>
+          <div class="icon"></i> 
+          </div>
+       </div>
+       <div class="info_wrapper">
+          <input type="text" id="firstCurrInp" name="firstCurrInp" oninput="updateAmount(this.value)" class="custom-input">
+          <span class="symbol">$</span>
+       </div>
+    </div>
+    <div class="currWrapper secondCurrency">
+       <div class="text_wrapper" data-izimodal-open="#modal" data-izimodal-transitionin="fadeInDown">
+          <div class="flag"><img src="https://www.countryflags.io/ca/flat/64.png"></div>
+          <div class="nameAbbr_wrapper">
+             <div class="abbr">CAD</div>
+             <div class="currName">Canadian Dollars</div>
+          </div>
+          <div class="icon"><i data-izimodal-open="#modal" data-izimodal-transitionin="fadeInDown" class="fas fa-angle-right"></i></div>
+       </div>
+       <div class="info_wrapper">
+          <input type="text" id="secondCurrInp" name="secondCurrInp" class="custom-input" disabled>
+          <span class="symbol">$</span>
+       </div>
+    </div>
+  </div>
+  <div id="modal" data-iziModal-title="Currency Changer" data-iziModal-subtitle="Choose a currency....">
+      <div id="currencyList">
+      </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/izimodal/1.5.1/js/iziModal.min.js"></script>
+  <script src="js/app.js"></script>
+
+</body>
+
+</html>
